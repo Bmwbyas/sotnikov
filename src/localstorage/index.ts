@@ -1,7 +1,7 @@
 import {LocalData} from "../store/slice/appSlice/types.ts";
 
 
-export const saveInLocalStorage = (data: LocalData) => {
+export const saveInLocalStorage = (data: any) => {
 
     for (const key in data) {
         localStorage.setItem(key, JSON.stringify(data[key]))

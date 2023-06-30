@@ -2,9 +2,9 @@ import ListItem from '@mui/material/ListItem';
 import Divider from '@mui/material/Divider';
 import ListItemText from '@mui/material/ListItemText';
 import Typography from '@mui/material/Typography';
-import {IComment} from "../../store/slice/comentsSlice";
 import {FC} from "react";
 import {Grid} from "@mui/material";
+import {IComment} from "../../store/slice/comentsSlice/types.ts";
 
 type Comments = {
     comment: IComment

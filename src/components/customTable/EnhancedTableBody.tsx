@@ -30,7 +30,7 @@ const EnhancedTableBody: FC<TableBodyType> = ({visibleRows, isSelected, handleCl
                                                 key={row.id+typeRow}
                         />
                         : typeRow === 'albums'
-                            ? <EnhancedTableRowAlbums row={row}
+                            ? <EnhancedTableRowAlbums data={row}
                                                       handleClick={handleClick}
                                                       isItemSelected={isItemSelected}
                                                       labelId={labelId}

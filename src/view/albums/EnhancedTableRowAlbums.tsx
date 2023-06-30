@@ -7,7 +7,7 @@ import StarOutlineIcon from "@mui/icons-material/StarOutline";
 import * as React from "react";
 import {FC} from "react";
 import {useAppDispatch} from "../../store/hook.ts";
-import {Data} from "../../components/customTable";
+import {Data, PhotoData} from "../../components/customTable";
 import {changeFavorites, removeAlbum, updateAlbum} from "../../store/slice/albumSlice";
 import {Stack} from "@mui/material";
 import MyModal from "../../components/myModal";
@@ -19,13 +19,14 @@ import {useNavigate} from "react-router-dom";
 import {router} from "../../configs/routerConfig.ts";
 
 type TableRowAlbumType = {
-    row: Data
+    data: Data
     isItemSelected: boolean | undefined
     handleClick: (_: React.MouseEvent<unknown>, id: number) => void
     labelId: string
 }
-const EnhancedTableRowAlbum: FC<TableRowAlbumType> = ({handleClick, row, labelId, isItemSelected}) => {
+const EnhancedTableRowAlbum: FC<TableRowAlbumType> = ({handleClick, data, labelId, isItemSelected}) => {
 
+    const row = data as PhotoData
     const dispatch = useAppDispatch()
 
     const navigate=useNavigate()

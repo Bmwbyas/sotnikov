@@ -5,7 +5,6 @@ import {jsonPlaceholderApi} from "../../../api/api.ts";
 import {handleServerNetworkError} from "../../../utils/error-utils.ts";
 import {IComment, ICommentsState} from "./types.ts";
 import {LocalData} from "../appSlice/types.ts";
-import {saveInLocalStorage} from "../../../localstorage";
 
 
 export const getComments = createAsyncThunk('comments/getComments', async (id: number, {dispatch}) => {

@@ -2,7 +2,6 @@ import {createAsyncThunk, createSlice, PayloadAction} from '@reduxjs/toolkit'
 import {jsonPlaceholderApi} from "../../../api/api.ts";
 import {handleServerNetworkError} from "../../../utils/error-utils.ts";
 import {AppType, LocalData, RequestStatusType} from "./types.ts";
-import {getLocalStorage} from "../../../localstorage";
 
 
 const initialState: AppType = {
